@@ -1,0 +1,289 @@
+@import "colors";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 20px;
+	width: 60px;
+	height: 4px;
+	background-color: $orange-color;
+}
+
+.orange-text {
+	color: $orange-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 1;
+
+	a,
+	.nav-link,
+	i {
+		transition: color 0.3s;
+		color: $white-color;
+	}
+
+	a:hover,
+	.nav-link:hover,
+	i:hover,
+	span {
+		color: $orange-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.active {
+		color: $orange-color;
+	}
+}
+
+header {
+	color: $white-color;
+
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url("../img/audience-3_640.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		// background-color: rgba(0,0,0,0.1);
+		background-image: url("../img/logo-black_medium.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		filter: alpha;
+		opacity: 0.9;
+		z-index: -10;
+	}
+
+	.hero-text {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 20px;
+		text-align: center;
+		z-index: 5;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+		margin-bottom: 50px;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		font-size: 30px;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $white-color;
+	}
+}
+
+.aboutus {
+	i {
+		// margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.fa-volume-high {
+		transition: color 0.3s;
+	}
+	.fa-volume-high:hover {
+		color: $orange-color;
+	}
+}
+
+.members {
+	// position: relative;
+	// height: 90vh;
+
+	h2 {
+		color: $white-color;
+	}
+
+	h5 {
+		text-transform: uppercase;
+		font-size: 32px;
+	}
+
+	.carousel-item {
+		// position: absolute;
+		// height: 100vh;
+		font-size: 24px;
+	}
+
+	.carousel-inner {
+		// position: absolute;
+		height: 10%;
+	}
+
+	.carousel-caption {
+		position: absolute;
+
+		left: 20;
+		right: 80;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.9);
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+
+	.row {
+		.empty {
+			color: $white-color;
+		}
+	}
+}
+
+.music {
+	.songs-list {
+		font-size: 20px;
+
+		.song-wrap {
+			margin: 20px 10px;
+			// padding: 30px;
+			// border: 2px solid $white-color;
+			// box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+			// border-radius: 2%;
+			transition: transform 0.3s;
+		}
+		.song-wrap:hover {
+			transform: scale(1.05, 1.05);
+			color: $orange-color;
+		}
+
+		audio {
+			// margin: 10px 10px;
+			width: 90%;
+		}
+	}
+}
+
+.video {
+	h2 {
+		color: $white-color;
+	}
+
+	.video-wrap {		
+		margin: 20px 10px;
+		// padding: 30px;
+		width: 576px;
+		height: 324px;
+		border: 2px solid $orange-color;
+		box-shadow: 4px 4px 10px rgba(134, 51, 28, 0.8);
+		// border-radius: 2%;
+		// transition: transform 0.3s;
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	
+}
+
+@media (min-width: 768px) {
+	header {
+		.hero-shadow {
+			background-size: 85%;
+		}
+	}
+
+	.music {
+		.songs-list {
+			audio {
+				width: 50%;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		height: 82px;
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url("../img/audience-3_1920.jpg");
+		}
+
+		.hero-shadow {
+			background-image: url("../img/logo-black-big.jpg");
+		}
+	}
+}

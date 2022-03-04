@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 82px;
+}
+
+body {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  background-color: #181515;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  margin: 0 auto 20px;
+  width: 60px;
+  height: 4px;
+  background-color: #e74011;
+}
+
+.orange-text {
+  color: #e74011;
+}
+
+.shadow-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav {
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
+  z-index: 1;
+}
+
+nav a,
+nav .nav-link,
+nav i {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #fff;
+}
+
+nav a:hover,
+nav .nav-link:hover,
+nav i:hover,
+nav span {
+  color: #e74011;
+}
+
+nav .fa-bars {
+  padding: 10px;
+}
+
+nav .navbar-brand {
+  font-weight: bold;
+}
+
+nav .active {
+  color: #e74011;
+}
+
+header {
+  color: #fff;
+}
+
+header h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+header p {
+  font-size: 14px;
+}
+
+header .hero-img {
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/audience-3_640.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+header .hero-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/logo-black_medium.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-filter: alpha;
+          filter: alpha;
+  opacity: 0.9;
+  z-index: -10;
+}
+
+header .hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  z-index: 5;
+}
+
+header .btn-outline-light {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+header .fa-chevron-down {
+  position: absolute;
+  font-size: 30px;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #fff;
+}
+
+.aboutus i {
+  font-size: 30px;
+}
+
+.aboutus .aboutus-card-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.aboutus .aboutus-card-text {
+  font-size: 14px;
+}
+
+.aboutus .fa-volume-high {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.aboutus .fa-volume-high:hover {
+  color: #e74011;
+}
+
+.members h2 {
+  color: #fff;
+}
+
+.members h5 {
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.members .carousel-item {
+  font-size: 24px;
+}
+
+.members .carousel-inner {
+  height: 10%;
+}
+
+.members .carousel-caption {
+  position: absolute;
+  left: 20;
+  right: 80;
+  padding: 40px 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.members .carousel-indicators {
+  padding-bottom: 20px;
+}
+
+.members .row .empty {
+  color: #fff;
+}
+
+.music .songs-list {
+  font-size: 20px;
+}
+
+.music .songs-list .song-wrap {
+  margin: 20px 10px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.music .songs-list .song-wrap:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  color: #e74011;
+}
+
+.music .songs-list audio {
+  width: 90%;
+}
+
+.video h2 {
+  color: #fff;
+}
+
+.video .video-wrap {
+  margin: 20px 10px;
+  width: 576px;
+  height: 324px;
+  border: 2px solid #e74011;
+  -webkit-box-shadow: 4px 4px 10px rgba(134, 51, 28, 0.8);
+          box-shadow: 4px 4px 10px rgba(134, 51, 28, 0.8);
+}
+
+@media (min-width: 375px) {
+  header h1 {
+    font-size: 36px;
+  }
+  header p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  header .hero-shadow {
+    background-size: 85%;
+  }
+  .music .songs-list audio {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    height: 82px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .hero-img {
+    background-image: url("../img/audience-3_1920.jpg");
+  }
+  header .hero-shadow {
+    background-image: url("../img/logo-black-big.jpg");
+  }
+}
+/*# sourceMappingURL=main.css.map */
