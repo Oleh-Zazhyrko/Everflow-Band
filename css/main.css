@@ -37,6 +37,10 @@ h2 {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.shadow-bg2 {
+  background-color: rgba(73, 69, 69, 0.8);
+}
+
 nav {
   text-transform: uppercase;
   -webkit-transition: background-color 0.6s;
@@ -175,11 +179,8 @@ header .fa-chevron-down {
 }
 
 .members .carousel-item {
+  position: relative;
   font-size: 24px;
-}
-
-.members .carousel-inner {
-  height: 10%;
 }
 
 .members .carousel-caption {
@@ -187,7 +188,7 @@ header .fa-chevron-down {
   left: 20;
   right: 80;
   padding: 40px 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
 .members .carousel-indicators {
@@ -233,12 +234,45 @@ header .fa-chevron-down {
           box-shadow: 4px 4px 10px rgba(134, 51, 28, 0.8);
 }
 
+.photos h2 {
+  color: #fff;
+}
+
+.contacts {
+  background-color: #fff;
+}
+
+.contacts h2 {
+  font-weight: bold;
+}
+
+.contacts .social-media {
+  font-size: 38px;
+}
+
+.contacts .social-media .link-wrap {
+  padding: 10px;
+}
+
+.contacts .social-media .link-wrap a {
+  color: #181515;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.contacts .social-media .link-wrap a:hover {
+  color: #e74011;
+}
+
 @media (min-width: 375px) {
   header h1 {
     font-size: 36px;
   }
   header p {
     font-size: 16px;
+  }
+  .contacts .social-media {
+    font-size: 30px;
   }
 }
 
