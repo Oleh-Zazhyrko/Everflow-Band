@@ -246,21 +246,23 @@
             <h2>video</h2>
             <div class="underline"></div>
 
-            <div class="container">
+            <!-- Video section for mobile -->
+
+            <div class="container d-md-none">
                 <div id="video-list" class="video-list row text-center justify-content-center px-1">
-                    <div id="video-wrap" class="video-wrap col-6 col-sm-12">
+                    <div id="video-wrap" class="video-wrap col-6 col-sm-12 mb-2">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/h4tcOzR88LU"
                             title="Get Down" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div id="video-wrap" class="video-wrap col-6 col-sm-12">
+                    <div id="video-wrap" class="video-wrap col-6 col-sm-12 mb-2">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LRlRlc9jWHo"
                             title="Black Jack" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div id="video-wrap" class="video-wrap col-6 col-sm-12">
+                    <div id="video-wrap" class="video-wrap col-6 col-sm-12 mb-2">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RfkYfqCWh-Y"
                             title="Russian Roulette" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -272,74 +274,132 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-
-
                 </div>
             </div>
+
+
+            <!-- VIdeo section for laptops -->
+            <div class="container d-none d-md-block">
+                <div class="wrapper">
+                    <div class="video-menu-tabs">
+                        <button data-id="first-tab" onclick="showVideoInfo('first-tab')"
+                            class="video-menu-tab video-menu-tab-active">Get
+                            Down</button>
+                        <button data-id="second-tab" onclick="showVideoInfo('second-tab')" class="video-menu-tab">Black
+                            Jack</button>
+                        <button data-id="third-tab" onclick="showVideoInfo('third-tab')" class="video-menu-tab">Russian
+                            Roulete</button>
+                        <button data-id="fourth-tab" onclick="showVideoInfo('fourth-tab')"
+                            class="video-menu-tab">Flashback</button>
+                    </div>
+
+                    <div class="video-menu-section" id="first-tab">
+
+                        <div id="video-wrap" class="video-wrap col-6 col-sm-12">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/h4tcOzR88LU"
+                                title="Get Down" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="video-menu-section" id="second-tab" style="display: none">
+                        <div id="video-wrap" class="video-wrap col-6 col-sm-12">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LRlRlc9jWHo"
+                                title="Black Jack" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="video-menu-section" id="third-tab" style="display: none">
+                        <div id="video-wrap" class="video-wrap col-6 col-sm-12">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RfkYfqCWh-Y"
+                                title="Russian Roulette" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="video-menu-section" id="fourth-tab" style="display: none">
+
+                        <div id="video-wrap" class="video-wrap col-6 col-sm-12">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/df9FOFOttZg"
+                                title="Flashback" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="photos" class="photos shadow-bg2 py-5">
+            <h2>galeria</h2>
+            <div class="underline"></div>
+
+            <div class="container">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/Galery/001.JPG" class="d-block w-100" alt="001 everflow">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Galery/002.png" class="d-block w-100" alt="002 everflow HearStudio">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Galery/003.jpg" class="d-block w-100" alt="003 everflow voodoo club">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Galery/004.jpg" class="d-block w-100" alt="004 everflow voodoo club">
+                        </div>
+                    </div>
+
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="contacts" class="contacts py-5">
+            <h2>nasze linki</h2>
+            <div class="underline"></div>
+
+            <div class="container w-50">
+
+                <div class="social-media row wrap text-center">
+                    <div class="link-wrap col-12 col-sm-4">
+                        <a href="https://www.facebook.com/EverFlowPL" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <div class="link-wrap col-12 col-sm-4">
+                        <a href="https://www.instagram.com/everflow.rockband/" target="_blank"><i
+                                class="fa-brands fa-instagram-square"></i></a>
+                    </div>
+                    <div class="link-wrap col-12 col-sm-4">
+                        <a href="https://www.youtube.com/channel/UC5RTIDuZx0zVlSTaYZc77lw" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 
-    <section id="photos" class="photos shadow-bg2 py-5">
-        <h2>galeria</h2>
-        <div class="underline"></div>
 
-        <div class="container">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./img/Galery/001.JPG" class="d-block w-100" alt="001 everflow">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/Galery/002.png" class="d-block w-100" alt="002 everflow HearStudio">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/Galery/003.jpg" class="d-block w-100" alt="003 everflow voodoo club">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/Galery/004.jpg" class="d-block w-100" alt="004 everflow voodoo club">
-                    </div>
-                </div>
-
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="contacts" class="contacts py-5">
-        <h2>nasze linki</h2>
-        <div class="underline"></div>
-
-        <div class="container w-25">
-
-            <div class="social-media row wrap text-center">
-                <div class="link-wrap col-12 col-sm-4">
-                    <a href="https://www.facebook.com/EverFlowPL" target="_blank"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                </div>
-                <div class="link-wrap col-12 col-sm-4">
-                    <a href="https://www.instagram.com/everflow.rockband/" target="_blank"><i
-                            class="fa-brands fa-instagram-square"></i></a>
-                </div>
-                <div class="link-wrap col-12 col-sm-4">
-                    <a href="https://www.youtube.com/channel/UC5RTIDuZx0zVlSTaYZc77lw" target="_blank"><i
-                            class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-
-    </section>
 
     <footer class="shadow-bg text-light py-4 text-center">
         <p class="mb-0"> &copy; 2022 | Everflow</p>

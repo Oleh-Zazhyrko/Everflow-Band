@@ -1,4 +1,15 @@
 @import "colors";
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-10%);
+	}
+	50% {
+		transform: translateX(10%);
+	}
+	75% {
+		transform: translateX(0);
+	}
+}
 
 *,
 *::before,
@@ -159,7 +170,6 @@ header {
 }
 
 .members {
-	
 	h2 {
 		color: $white-color;
 	}
@@ -175,10 +185,9 @@ header {
 		font-size: 24px;
 	}
 
-	.carousel-inner {
-		// position: absolute;
-		
-	}
+	// .carousel-inner {
+	// 	// position: absolute;
+	// }
 
 	.carousel-caption {
 		position: absolute;
@@ -225,16 +234,59 @@ header {
 }
 
 .video {
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80vh;
+		flex-direction: column;
+		padding: 3em;
+		border-radius: 8px;
+		// background-color: #fff;
+	}
+
+	.video-menu-tabs {
+		margin-bottom: 2em;
+	}
+
+	.video-menu-tab {
+		padding: 0.5em 1em;
+		font-size: 28px;
+		background-color: #fff;
+		border-radius: 8px;
+		border: 1px solid #333;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+	}
+
+	.video-menu-section {
+		animation: 1s ease-in 0s 1 slideInFromLeft;
+	}
+
+	.video-menu-tab-active {
+		background-color: $orange-color;
+		color: $white-color;
+	}
+
+	.video-menu-tab:hover {
+		background-color: $orange-color2;
+		color: $white-color;
+	}
+
 	h2 {
 		color: $white-color;
 	}
 
 	.video-wrap {
-		margin: 20px 10px;
-		// padding: 30px;
-		width: 576px;
-		height: 324px;
+		// margin: 20px 10px;
+		padding: 20px 10px;
+
+		// width: 576px;
+		// height: 324px;
+		width: 512px;
+		height: 288px;
 		border: 2px solid $orange-color;
+		border-radius: 5px;
 		box-shadow: 4px 4px 10px rgba(134, 51, 28, 0.8);
 		// border-radius: 2%;
 		// transition: transform 0.3s;
@@ -245,7 +297,6 @@ header {
 	h2 {
 		color: $white-color;
 	}
-
 }
 
 .contacts {
@@ -260,15 +311,55 @@ header {
 
 		.link-wrap {
 			padding: 10px;
-			// border: 3px solid black;
+			// border: 1px solid black;
 
 			a {
 				color: $bg-color;
 				transition: color 0.3s;
 			}
+
 			a:hover {
 				color: $orange-color;
 			}
+
+			border-radius: 0;
+			overflow: visible;
+			transition: 0.8s;
+		}
+
+		.link-wrap::after,
+		.link-wrap::before {
+			width: 100%;
+			height: 100%;
+		}
+
+		.link-wrap::before {
+			top: 0;
+			left: 0;
+		}
+
+		.link-wrap::after {
+			bottom: 0;
+			right: 0;
+		}
+
+		.link-wrap:hover {
+			border: 1px solid transparent;
+			color: $orange-color;
+		}
+
+		.link-wrap:hover::after {
+			bottom: -10px;
+			right: -10px;
+			border-bottom: 5px solid $orange-color;
+			border-right: 5px solid $orange-color;
+		}
+
+		.link-wrap:hover::before {
+			top: -10px;
+			left: -10px;
+			border-top: 5px solid $orange-color;
+			border-left: 5px solid $orange-color;
 		}
 	}
 }
@@ -285,13 +376,27 @@ header {
 
 	.contacts {
 		.social-media {
-			font-size: 30px;
+			font-size: 24px;			
 		}
+	}
+	.video {				
+	
+		.video-wrap {	
+			
+			width: 512px;
+			height: 288px;			
+		}		
 	}
 }
 
-// @media (min-width: 576px) {
-// }
+@media (min-width: 576px) {
+	.contacts {
+		.social-media {
+			font-size: 30px;
+			
+		}
+	}
+}
 
 @media (min-width: 768px) {
 	header {
@@ -307,12 +412,56 @@ header {
 			}
 		}
 	}
+
+	.video {				
+		
+		.video-menu-tab {
+			padding: 0.5em 1em;
+			font-size: 18px;			
+		}	
+
+		.video-wrap {			
+			width: 768px;
+			height: 432px;			
+		}	
+		
+	}
 }
 
 @media (min-width: 992px) {
 	nav {
 		height: 82px;
 	}
+
+	.video {
+		.wrapper {			
+			padding: 3em;			
+		}
+	
+		.video-menu-tabs {
+			margin-bottom: 2em;
+		}
+	
+		.video-menu-tab {
+			padding: 0.5em 1em;
+			font-size: 24px;			
+		}		
+	
+		.video-wrap {	
+			
+			width: 1024px;
+			height: 576px;			
+		}		
+	}
+
+	.contacts {
+		.social-media {
+			font-size: 48px;
+			
+		}
+	}
+	
+
 }
 
 @media (min-width: 1200px) {
@@ -324,5 +473,25 @@ header {
 		.hero-shadow {
 			background-image: url("../img/logo-black-big.jpg");
 		}
+	}	
+	.video {
+		.wrapper {			
+			padding: 3em;			
+		}
+	
+		.video-menu-tabs {
+			margin-bottom: 2em;
+		}
+	
+		.video-menu-tab {
+			padding: 0.5em 1em;
+			font-size: 28px;			
+		}		
+	
+		.video-wrap {	
+			
+			width: 1280px;
+			height: 720px;			
+		}		
 	}
 }
